@@ -1,5 +1,6 @@
 import sqlite3 as sl
 from easygui import *
+from user_interface import interface
 
 # создание подключения к БД
 conn = sl.connect("phonebook.db")
@@ -18,3 +19,5 @@ cur.execute("""
             email TEXT
             );
             """)
+
+interface()

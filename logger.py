@@ -23,3 +23,9 @@ def print_data():
         surname = surname_data()
         cur.execute(f"SELECT * FROM users WHERE surname = {surname};")
         print(cur.fetchall())
+
+def update_data():
+    pass
+
+def delete_data():
+    pass
