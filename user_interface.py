@@ -1,6 +1,20 @@
 from logger import input_data, print_data, update_data, delete_data
+from db_connect import create_cur
 
 def interface():
+    # создадим таблицу users, если она не создана
+    cur = create_cur()
+    cur.execute("""
+                CREATE TABLE IF NOT EXISTS users
+                (
+                id INTEGER PRIMARY KEY,
+                name TEXT,
+                surname TEXT,
+                phone INTEGER,
+                email TEXT
+                );
+                """)
+    
     print("Телефонный справочник! \n 1 - Показать контакты \n 2 - Добавить контакты "
           "\n 3 - Изменить контакты \n 4 - Удалить контакты \n 5 - Выход \n")
     
