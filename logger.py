@@ -21,7 +21,7 @@ def print_data():
         print(cur.fetchall())
     elif var == 2:
         surname = surname_data()
-        cur.execute(f"SELECT * FROM users WHERE surname = {surname};")
+        cur.execute(f"SELECT * FROM users WHERE surname = '{surname}';")
         print(cur.fetchall())
 
 def update_data():
