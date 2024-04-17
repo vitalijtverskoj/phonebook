@@ -10,9 +10,9 @@ def interface():
         try:
             command = int(input("Выберите вариант "))
         except ValueError:
-            print("Выберете один из 4-х вариантов")
+            print("Выберете один из 5-ти вариантов")
             continue
-        if command in [1, 2, 3, 4]:
+        if command in [1, 2, 3, 4, 5]:
             if command == 1:
                 print_data()
             elif command == 2:
@@ -27,7 +27,7 @@ def interface():
             print("Телефонный справочник! \n 1 - Показать контакты \n 2 - Добавить контакты "
                     "\n 3 - Изменить контакты \n 4 - Удалить контакты \n 5 - Выход \n")
         else:
-            print("Выберете один из 4-х вариантов")
+            print("Выберете один из 5-ти вариантов")
 
 def input_data():
     name = name_data()
